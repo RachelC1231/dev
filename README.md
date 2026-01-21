@@ -5,4 +5,7 @@
 3. 使用API
 # Git 常用的命令
 1. Git pull
-2. Git push
+2. git add .
+3. Git push
+4. Git commit -m ""
+5. Git status
