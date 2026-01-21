@@ -5,9 +5,9 @@
 3. 使用API
 # Git 常用的命令
 1. Git pull
-2. git add .
+2. Git add .
 3. Git commit -m ""
 4. Git push
-5. Git status
-6. git push
-7. 
+-- 解决冲突 --
+1. Git add 'readme.txt' 'main.py'
+
