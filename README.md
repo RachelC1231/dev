@@ -3,3 +3,6 @@
 1. 数据库PostSQL的连接和操作(DM)
 2. 创建Restful API
 3. 使用API
+# Git 常用的命令
+1. Git pull
+2. Git push
