@@ -6,7 +6,7 @@ SERVER_PORT = 9000          # 服务器端口
 
 def tcp_client():
     # 创建 TCP socket
-    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # class socket object
 
     try:
         # 建立连接
