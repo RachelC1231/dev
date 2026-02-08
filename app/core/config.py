@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     POSTGRES_HOST: str
     POSTGRES_PORT: int
     POSTGRES_DB: str
+    
+    AUTH_SECRETE_KEY: str
 
 settings = Settings()
 

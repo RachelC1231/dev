@@ -1,0 +1,3 @@
+pip install pydantic-settings
+pip install psycopg2
+pip install sqlalchemy

@@ -20,18 +20,21 @@ while True:
 
     try:
         # 5. 接收数据
-        data = client_socket.recv(1024)
-        if not data:
-            break
+        while True:
+            data = client_socket.recv(1024)
+            if not data:
+                print("break")
+                break
 
-        message = data.decode("utf-8")
-        print("Received:", message)
+            message = data.decode("utf-8")
+            print("Received:", message)
 
-        # 6. 回复数据
-        response = f"Server received: {message}"
-        client_socket.send(response.encode("utf-8"))
+            # 6. 回复数据
+            response = f"Server: {message}"
+            client_socket.send(response.encode("utf-8"))
 
     finally:
-        # 7. 关闭连接
         client_socket.close()
-        print("Client disconnected")
+        # 7. 关闭连接
+        print("...")
+        
