@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 from app.core.config import settings
 
-
+# 数据库连接
 def _build_postgres_url() -> str:
     """
     使用 POSTGRES_* 配置拼装 SQLAlchemy Postgres URL
@@ -19,7 +19,6 @@ def _build_postgres_url() -> str:
         f"{settings.POSTGRES_PORT}/"
         f"{settings.POSTGRES_DB}"
     )
-
 
 DATABASE_URL = _build_postgres_url()
 
