@@ -70,12 +70,13 @@ class UserService:
     
     def get_user(self, db, email: EmailStr) -> GetUserResponse:
         user = self.repo.get_by_email(db, email)
-        character = GetUserResponse()
-        character.email = user.email
-        character.username = user.username
-        character.user_id = user.user_id
-        character.external_uid = user.external_uid
-        character.jwt_token_key = user.jwt_token_key
-        character.user_role = user.user_role
-        character.country_code = user.country_code
+        return GetUserResponse(
+        user_id=user.user_id,
+        email=user.email,
+        username=user.username,
+        external_uid=user.external_uid,
+        jwt_token_key=user.jwt_token_key,
+        country_code=user.country_code,
+        user_role=user.user_role,
+    )
 
