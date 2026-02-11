@@ -1,4 +1,4 @@
-# 录数据到数据库
+# 跟API无关-录数据到数据库
 import psycopg2
 from uuid import uuid4
 from datetime import datetime

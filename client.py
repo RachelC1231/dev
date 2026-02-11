@@ -1,7 +1,7 @@
 # 底层 TCP 客户端
 import socket
 
-SERVER_HOST = "192.168.12.14"   # 服务器IP
+SERVER_HOST = "192.168.12.13"   # 服务器IP
 SERVER_PORT = 9000          # 服务器端口
 
 def tcp_client():

@@ -35,7 +35,7 @@ def generate_jwt_token(
         username: 用户名
         email: 邮箱
         secret_key: 密钥
-        duration_seconds: 有效期（秒）
+        duration_seconds: 令牌有效期（秒）
     
     Returns:
         生成的 JWT Token 字符串
@@ -45,6 +45,7 @@ def generate_jwt_token(
     expire_time = int(time.time()) + duration_seconds
     
     # 构建 Claims (载荷)
+    # Claim = 单个声明（一条信息), Payload = 一堆 claims 的集合（JWT 的中间那部分）
     payload = {
         # 自定义声明
         "user_id": str(user_id),          # UUID 需要转为字符串
@@ -73,7 +74,7 @@ def verify_jwt_token(token_string: str, secret_key: str) -> Tuple[Optional[JWTCl
     
     Args:
         token_string: JWT Token 字符串
-        secret_key: 用于验证签名的密钥
+        secret_key: 用于验证签名的密钥；签名：用secret key生成的jwt token，secret key对token签名
     
     Returns:
         Tuple: (Claims对象, 错误信息)。如果验证成功，错误信息为 None。
